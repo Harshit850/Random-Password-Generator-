@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <div class="main_header">
+        <h2>Password Generator</h2>
+        <hr />
+      </div>
+      <div class="main_content">
+        <div class="password_div">
+          <p class="password" id="password">abcdefghij</p>
+          <span
+            class="material-symbols-outlined copy_password"
+            id="copy_password"
+          >
+            copy_all
+          </span>
+          <span class="material-symbols-outlined" id="copied"> done_all </span>
+        </div>
+        <div class="password_length_div">
+          <div>
+            <h3>Password Length</h3>
+            <p class="password_length" id="password_length">10</p>
+          </div>
+
+          <input type="range" class="slider" id="slider" min="8" max="20" />
+        </div>
+        <div class="password_settings_div">
+          <div>
+            <h3>Password Length</h3>
+            <div class="inputs">
+              <div class="input">
+                <input
+                  type="checkbox"
+                  name="lowercase"
+                  id="lowercase"
+                  checked
+                />
+                <label for="lowercase">Lowercase (a - z)</label>
+              </div>
+              <div class="input">
+                <input type="checkbox" name="uppercase" id="lowercase" />
+                <label for="lowercase">Uppercase (A - Z)</label>
+              </div>
+              <div class="input">
+                <input type="checkbox" name="digits" id="digits" />
+                <label for="digits">Digits (0 - 9)</label>
+              </div>
+              <div class="input">
+                <input type="checkbox" name="symbols" id="symbols" />
+                <label for="symbols">Symbols (!~#@$%&)</label>
+              </div>
+            </div>
+            <div class="generate_button">
+              <button id="generate_password">Generate Password</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div id="alert" class="alert">
+      <p>Password Copied to Clipboard!</p>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
